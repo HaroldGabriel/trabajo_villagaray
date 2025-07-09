@@ -29,9 +29,8 @@ header {
     align-items: center;
     width:100%;
     .logo {
-        height: 50px;
-        width: 50px;
-        margin-left: 5px;
+        height: 80%;
+        width: 20%;
     }
 }
 
@@ -39,8 +38,7 @@ ul,li {
     list-style: none;
 }
 .navegacion{
-    width:100%;
-    
+    /*width:100%;    */
 }
 /*img navegacion*/
 .menu-icon {
@@ -114,25 +112,34 @@ main{
 .carrusel-imagenes {
     width: 100%;
     height: 30%;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow-x: auto;
     .carrusel{
         display: flex;
         flex-wrap: nowrap;
-        overflow: scroll;
+        
         width: 100%;
         height: 100%;
+        
         .slide{
             display: flex;
             justify-content: center;
             align-items: center;
-            flex: 1 0 auto;
-            width: 80%;
+            scroll-snap-align: center;
+            flex: 0 0 auto;
+            width: 90%;
             img{
                 width: 80%;
                 height: 100%;
+                object-fit: cover;
             }
-        }
-        
+        }       
     }
+}
+
+.spacer {
+    flex: 0 0 10%; /* Ocupa espacio para centrar */
 }
 
 /*Noticias*/
